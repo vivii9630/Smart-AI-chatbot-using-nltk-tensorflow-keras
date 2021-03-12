@@ -1,0 +1,63 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello","Hey what's up","Hey there"],
+         "responses": ["Hello, what's up", "Hello, How can I be of service to you", "Hi there, how can I help you?"]
+           },
+    
+        {"tag": "name",
+         "patterns": ["Who are you", "What's your name", "How can I call you?", "your name please"],
+         "responses": ["My name is Yogi", "I'm Yogi", "You can call me Yogi bhai"]
+           },
+        {"tag": "job",
+         "patterns": ["What do you do here?", "What are you doing", "What's your job?"],
+         "responses": ["I was assigned to assist people with their queries. Do you need any information?", "I am assigned to talk with different people and assist them with the required information that they were looking for. Are you looking for something ?"]
+           },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "quit"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "hours",
+         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
+         "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
+        },
+        {"tag": "mopeds",
+         "patterns": ["Which mopeds do you have?", "What kinds of mopeds are there?", "What do you rent?" ],
+         "responses": ["We rent Yamaha, Piaggio and Vespa mopeds", "We have Piaggio, Vespa and Yamaha mopeds"]
+        },
+        {"tag": "payments",
+         "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
+         "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
+        },
+        {"tag": "opentoday",
+         "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+         "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
+        },
+        {"tag": "rental",
+         "patterns": ["Can we rent a moped?", "I'd like to rent a moped", "How does this work?" ],
+         "responses": ["Are you looking to rent today or later this week?"],
+         "context_set": "rentalday"
+        },
+    
+        {"tag": "youtube",
+         "patterns": ["Open Youtube", "connect to youtube" ],
+         "responses": ["Connecting to youtube..."]
+        },
+    
+        {"tag": "google",
+         "patterns": ["Open google", "connect to google"],
+         "responses": ["Connecting to google..."]
+        },
+    
+ 
+    
+        {"tag": "today",
+         "patterns": ["today","rightnow","this day","Same day"],
+         "responses": ["For rentals today please call 1-800-MYMOPED", "Same-day rentals please call 1-800-MYMOPED"],
+         "context_filter": "rentalday"
+        }
+   ]
+}
